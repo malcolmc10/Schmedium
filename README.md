@@ -32,17 +32,23 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 
 # Libraries and Dependencies
 Tailwind - tailwind is AirBnB's CSS styling tool.
-React
+React - allows us to build Frontend.
+Ruby -  allows us to build backend.
+Rails - allows us to build backend models and tables.
+Axios - used for API.
+React Router - used for Routes.
+CORS - used for API calls.
+
 
 
 
 # Wireframes
 
-Mobile:
+Mobile:  https://wireframe.cc/pro/pp/fef1eb7b6358462
 
-Desktop: https://wireframe.cc/IcBMaU
+Desktop: https://wireframe.cc/pro/pp/fe4f9f610358452
 
-Tablet:  https://wireframe.cc/IcBMaU
+Tablet:  https://wireframe.cc/pro/pp/fe4f9f610358452
 
 
 # Component Tree
