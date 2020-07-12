@@ -66,6 +66,17 @@ src
 |__ components/
       |__ Header.jsx
 |__ services/
+|__ assets/
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups
+|__ assets/
+      |__ fonts
+      |__ graphics
+      |__ images
+      |__ mockups 
+     
 
 ## Component Breakdown
 
@@ -107,10 +118,20 @@ Logo  	functional	n	n	This is the logo for the entire site.
 # Server (Back End)
 ERD Model:
 
+https://drive.google.com/file/d/1W0VLVGAEkjAFl-WD4Fwd4IQX7CSbyFIL/view?usp=sharing
 
 
 # Post-MVP
 
+Add a search bar with ability to search for reviews based on specific movies.
+Adding a trailer to the movie pages.
+Adding a star rating system to the movies.
+Adding Rotten Tomatoes ratings to movie page.
+Adding a page to look at specifc movies.
+Adding loading animations.
+Adding a favicon.
+Adding a pop up when you login to enter a review.
+Ability to search other users articles with a page dedicated and public to the public. 
 
 # Code Showcase
 
