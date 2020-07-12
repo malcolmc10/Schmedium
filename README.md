@@ -53,10 +53,9 @@ Tablet:  https://wireframe.cc/pro/pp/fe4f9f610358452
 
 # Component Tree
 
+https://drive.google.com/file/d/1L8nO_c1plHJolDn2ffwNnGmnlsqlD3Co/view?usp=sharing
 
 # Component Hierarchy
-
-
 
 src
 |__ assets/
@@ -72,19 +71,36 @@ src
 
 
 Component	Type	state	props	Description
-Header	functional	n	n	The header will contain the navigation and logo.
-Navigation	functional	n	n	The navigation will provide a link to each of the pages.
-Gallery	class	y	n	The gallery will render the posts using cards in flexbox.
-Gallery Card	functional	n	y	The cards will render the post info via props.
+
+Header	functional	n	n	The Header will show the logo and navigation.
 Footer	functional	n	n	The footer will show info about me and a link to my portfolio.
-Time Estimates
+Review	functional	n	n	Will show a random article.
+ArticleC	functional	n	n	Will show a carosel of articles.
+App	      functional	n	n	The app is the main and base of the application
+Main	      functional	n	n	Homepage
+Register	functional	n	n	This is where the user will register for the site.
+Login 	functional	n	n	This is where the user will login into the site
+MyArticle	functional	n	n	Theis is where the user can view their articles and edit and delete.
+Logo  	functional	n	n	This is the logo for the entire site.
+
+
+# Time Estimates
 Use this section to estimate the time necessary to build out each of the components you've described above.
 
 Task	Priority	Estimated Time	Time Invested	Actual Time
-Add Contact Form	L	3 hrs	2 hrs	3 hrs
-Create CRUD Actions	H	3 hrs	1 hrs	TBD
-TOTAL		6 hrs	3 hrs	TBD
-Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe.
+
+Wireframing	   H	3 hrs	 hrs	TBD
+Backend 	   H	6 hrs	 hrs	TBD
+CRUD  	   H	5 hrs	 hrs	TBD
+Create componenets H	3 hrs	 hrs	TBD
+CSS	H	5 hrs	 hrs	TBD
+Create logo	H	3 hrs	 hrs	TBD
+add carosel	H	2 hrs	hrs	TBD
+add random algo	H	2 hrs	 hrs	TBD
+deploy	H	3 hrs	 hrs	TBD
+
+TOTAL		32 hrs	 hrs	TBD
+
 
 
 # Server (Back End)
