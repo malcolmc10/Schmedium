@@ -101,6 +101,21 @@ deploy	H	3 hrs	 hrs	TBD
 
 TOTAL		32 hrs	 hrs	TBD
 
+| Task                | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------- | :------: | :------------: | :-----------: | :---------: |
+| Add header compoent |    M     |     3 hrs      |      hrs     |      hrs      |
+| Backend           |    H     |     3 hrs      |      hrs     |      hrs      |
+| Render images       |    H     |     3 hrs      |      hrs     |      hrs      |
+| Create Links        |    H     |     4 hrs      |      hrs     |       hrs     |
+| Develop My Articles page   |    H     |     5 hrs      |     hrs     |      hrs     |
+| CRUD    |    H     |     5 hrs      |      1hrs     |       hr      |
+| CSS                 |    M     |     5 hrs      |      hrs     |     hr       |
+| random article algo           |    H     |     5 hrs      |      hrs     |             |
+| Creating Logo       |    H     |     1 hrs      |      hrs     |     hr      |
+|     Debugging       |    H     |     3 hrs      |      hrs     |     hrs      |
+|     Deploy       |    H     |     3 hrs      |      hrs     |     hrs      |
+| TOTAL               |          |     37 hrs     |     hrs     |      hrs    |
+
 
 
 # Server (Back End)
