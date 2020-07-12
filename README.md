@@ -1,7 +1,7 @@
 
 
 # Overview
-# Schmedium
+# Small.
 This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you indepth reviews in 500 characters of less. Save time with Movie time using Schmedium.
 
 
