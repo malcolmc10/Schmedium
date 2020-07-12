@@ -85,21 +85,7 @@ Logo  	functional	n	n	This is the logo for the entire site.
 
 
 # Time Estimates
-Use this section to estimate the time necessary to build out each of the components you've described above.
 
-Task	Priority	Estimated Time	Time Invested	Actual Time
-
-Wireframing	   H	3 hrs	 hrs	TBD
-Backend 	   H	6 hrs	 hrs	TBD
-CRUD  	   H	5 hrs	 hrs	TBD
-Create componenets H	3 hrs	 hrs	TBD
-CSS	H	5 hrs	 hrs	TBD
-Create logo	H	3 hrs	 hrs	TBD
-add carosel	H	2 hrs	hrs	TBD
-add random algo	H	2 hrs	 hrs	TBD
-deploy	H	3 hrs	 hrs	TBD
-
-TOTAL		32 hrs	 hrs	TBD
 
 | Task                | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -114,7 +100,7 @@ TOTAL		32 hrs	 hrs	TBD
 | Creating Logo       |    H     |     1 hrs      |      hrs     |     hr      |
 |     Debugging       |    H     |     3 hrs      |      hrs     |     hrs      |
 |     Deploy       |    H     |     3 hrs      |      hrs     |     hrs      |
-| TOTAL               |          |     37 hrs     |     hrs     |      hrs    |
+| TOTAL               |          |     40 hrs     |     hrs     |      hrs    |
 
 
 
