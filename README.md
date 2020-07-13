@@ -1,7 +1,7 @@
 
 
 # Overview
-# Small.
+# Schmedium
 This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you indepth reviews in 500 characters of less. Save time with Movie time using Schmedium.
 
 
@@ -59,24 +59,23 @@ https://drive.google.com/file/d/1L8nO_c1plHJolDn2ffwNnGmnlsqlD3Co/view?usp=shari
 # Component Hierarchy
 
 src
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
+      
 |__ components/
-      |__ Header.jsx
+      |__ Header
+      |__ Footer
+      |__ App.jsx
+      |__ Main.jsx
+      |__ Register
+      |__ Create
+      |__ MyArticle
+      |__ Logo
+      |__ CSS
 |__ services/
 |__ assets/
       |__ fonts
       |__ graphics
       |__ images
-      |__ mockups
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups 
+       
      
 
 ## Component Breakdown
