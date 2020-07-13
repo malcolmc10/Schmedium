@@ -82,18 +82,9 @@ src
 ## Component Breakdown
 
 
-Component	Type	state	props	Description
 
-Header	functional	n	n	The Header will show the logo and navigation.
-Footer	functional	n	n	The footer will show info about me and a link to my portfolio.
-Review	functional	n	n	Will show a random article.
-ArticleC	functional	n	n	Will show a carosel of articles.
-App	      functional	n	n	The app is the main and base of the application
-Main	      functional	n	n	Homepage
-Register	functional	n	n	This is where the user will register for the site.
-Login 	functional	n	n	This is where the user will login into the site
-MyArticle	functional	n	n	Theis is where the user can view their articles and edit and delete.
-Logo  	functional	n	n	This is the logo for the entire site.
+
+
 
 |  Component   |    Type    | State | Props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
