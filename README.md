@@ -95,6 +95,21 @@ Login 	functional	n	n	This is where the user will login into the site
 MyArticle	functional	n	n	Theis is where the user can view their articles and edit and delete.
 Logo  	functional	n	n	This is the logo for the entire site.
 
+|  Component   |    Type    | State | Props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  Logo.       | functional |   n   |   n   | _This component holds the Logo of the website application        |
+|   Footer     | functional |   y   |   n   | _This holds the copyright and portolio_                              |
+|    Review      | functional |   n   |   n   | _This page holds all the routes and links_.                      |
+|    ArticleC    | functional |   y   |   y   | _This is where you create articles_      |
+|    App   | functional |   y   |   y   | _Holds the base of the code including routes_  |
+|    CSS pages | functional |   y   |   y   | _These components hold all of the styling for my application.    |
+|    Main    | functional |   n   |   n   | _This is the home page._               |
+|    Register    | functional |   n   |   n   | _Registration area_               |
+|    Login    | functional |   n   |   n   | _Logn area_               |
+|    MyArticle    | functional |   n   |   n   | _This is where the CRUD happens_               |
+
+
 
 # Time Estimates
 
