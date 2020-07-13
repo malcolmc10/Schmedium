@@ -6,18 +6,18 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 
 
 # MVP
-1. Have a thorough and well planned out ReadMe.
-2. Build a Ruby on Rails Server that exposes Restful JSON endpoints.
-3. Build a database with 3 tables.
+1. I will have a thorough and well planned out ReadMe.
+2. I will build a Ruby on Rails Server that exposes Restful JSON endpoints.
+3. I will build a database with 3 tables (Movies, Users, and Articles).
 4. Implement working controller actions using for full CRUD between my tables.
 5. Have a working React application.
-6. demonstate full CRUD.
-7. Styled using CSS.
-8. Implement 2 media queries. 
-9. Proper Linting through out.
-10.Deploy using Surge.
-11. Deploy the backend using Heroku.
-12. 75 commits minimum.
+6. I will demonstate full CRUD.
+7. Styled using CSS Tailwind.
+8. I will implement 2 media queries. 
+9. I will ensure proper Linting through out.
+10. Deploy the application by using Surge.
+11. I will deploy the backend using Heroku.
+12. I will amke sure to have 75 commits minimum.
 
 
 
