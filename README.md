@@ -7,7 +7,7 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 
 # MVP
 1. I will have a thorough and well planned out ReadMe.
-2. I will build a Ruby on Rails Server that exposes Restful JSON endpoints.
+2. Use Ruby on Rails exposing Restful JSON endpoints.
 3. I will build a database with 3 tables (Movies, Users, and Articles).
 4. Implement working controller actions using for full CRUD between my tables.
 5. Have a working React application.
