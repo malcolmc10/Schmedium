@@ -1,38 +1,42 @@
-
-
 # Overview
 # Schmedium
 This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you indepth reviews in 500 characters of less. Save time with Movie time using Schmedium.
 
 
 # MVP
-1. Have a thorough and well planned out ReadMe.
-2. Build a Ruby on Rails Server that exposes Restful JSON endpoints.
-3. Build a database with 3 tables.
-4. Implement working controller actions using for full CRUD between my tables.
-5. Have a working React application.
-6. demonstate full CRUD.
-7. Styled using CSS.
-8. Implement 2 media queries. 
-9. Proper Linting through out.
-10.Deploy using Surge.
-11. Deploy the backend using Heroku.
-12. 75 commits minimum.
-13. Placing a randomizer on the homepager that will share a random article.
-14. Placing a Carosel on the home page that will hold the articles written.
+
+1. Use Ruby on Rails exposing Restful JSON endpoints.
+2. Use working controller actions to utilize full CRUD on articles the user creates.
+3. Use Tailwind CSS to create a good looking application.
+4. Use proper Linting for usability for future contributors on this application.
+5. The application will showcase a carousel of articles on the home screen to showcase articles.
+6. User will be able to few a list of randomly generated articles on the homepage.
+7. The application will allow the user to edit and delete their own articles via their MyArticles web page. 
+
+
+
+
+
+
+
+
+
+
 
 
 
 # Goals
+```
 -  Have the backend completed by Tuesday Morning.
 -  Have React app basics and rendering completed by Weds morning. 
 -  Have MVP by Thursday night.
 -  Have the backend and frontend deployed Friday evening. 
 -  Complete at least 2 Post MVPs by Tuesday morning.
-
+```
 
 
 # Libraries and Dependencies
+```
 Tailwind - tailwind is AirBnB's CSS styling tool.
 React - allows us to build Frontend.
 Ruby -  allows us to build backend.
@@ -40,7 +44,7 @@ Rails - allows us to build backend models and tables.
 Axios - used for API.
 React Router - used for Routes.
 CORS - used for API calls.
-
+```
 
 
 
@@ -58,7 +62,7 @@ Tablet:  https://wireframe.cc/pro/pp/c59ccf2f5358475
 https://drive.google.com/file/d/1L8nO_c1plHJolDn2ffwNnGmnlsqlD3Co/view?usp=sharing
 
 # Component Hierarchy
-
+```
 src
       
 |__ components/
@@ -77,23 +81,29 @@ src
       |__ graphics
       |__ images
        
-     
+   ```  
 
 ## Component Breakdown
 
 
-Component	Type	state	props	Description
 
-Header	functional	n	n	The Header will show the logo and navigation.
-Footer	functional	n	n	The footer will show info about me and a link to my portfolio.
-Review	functional	n	n	Will show a random article.
-ArticleC	functional	n	n	Will show a carosel of articles.
-App	      functional	n	n	The app is the main and base of the application
-Main	      functional	n	n	Homepage
-Register	functional	n	n	This is where the user will register for the site.
-Login 	functional	n	n	This is where the user will login into the site
-MyArticle	functional	n	n	Theis is where the user can view their articles and edit and delete.
-Logo  	functional	n	n	This is the logo for the entire site.
+
+
+
+|  Component   |    Type    | State | Props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+|  Logo.       | functional |   n   |   n   | _This component holds the Logo of the website application        |
+|   Footer     | functional |   y   |   n   | _This holds the copyright and portolio_                              |
+|    Review      | functional |   n   |   n   | _This page holds all the routes and links_.                      |
+|    ArticleC    | functional |   y   |   y   | _This is where you create articles_      |
+|    App   | functional |   y   |   y   | _Holds the base of the code including routes_  |
+|    CSS pages | functional |   y   |   y   | _These components hold all of the styling for my application.    |
+|    Main    | functional |   n   |   n   | _This is the home page._               |
+|    Register    | functional |   n   |   n   | _Registration area_               |
+|    Login    | functional |   n   |   n   | _Logn area_               |
+|    MyArticle    | functional |   n   |   n   | _This is where the CRUD happens_               |
+
 
 
 # Time Estimates
@@ -123,7 +133,7 @@ https://drive.google.com/file/d/1W0VLVGAEkjAFl-WD4Fwd4IQX7CSbyFIL/view?usp=shari
 
 
 # Post-MVP
-
+```
 Add a search bar with ability to search for reviews based on specific movies.
 Adding a trailer to the movie pages.
 Adding a star rating system to the movies.
@@ -133,7 +143,8 @@ Adding loading animations.
 Adding a favicon.
 Adding a pop up when you login to enter a review.
 Ability to search other users articles with a page dedicated and public to the public. 
-
+ Placing a randomizer on the homepager that will share a random article.
+```
 # Code Showcase
 
 
