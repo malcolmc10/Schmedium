@@ -6,20 +6,22 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 
 
 # MVP
-1. I will have a thorough and well planned out ReadMe.
-2. Use Ruby on Rails exposing Restful JSON endpoints.
-3. I will build a database with 3 tables (Movies, Users, and Articles).
-4. Implement working controller actions using for full CRUD between my tables.
-5. Have a working React application.
-6. I will demonstate full CRUD.
-7. Styled using CSS Tailwind.
-8. I will implement 2 media queries. 
-9. I will ensure proper Linting through out.
-10. Deploy the application by using Surge.
-11. I will deploy the backend using Heroku.
-12. I will amke sure to have 75 commits minimum.
-13. I will use atleast 2 media queries in my css.
-14. I will have a carousel of articles.
+
+1. Use Ruby on Rails exposing Restful JSON endpoints.
+2. Use working controller actions to utilize full CRUD on articles the user creates.
+3. Use Tailwind CSS to create a good looking application.
+4. Use proper Linting for usability for future contributors on this application.
+5. The application will showcase a carousel of articles on the home screen to showcase articles.
+6. User will be able to few a list of randomly generated articles on the homepage.
+7. The application will allow the user to edit and delete their own articles via their MyArticles web page. 
+
+
+
+
+
+
+
+
 
 
 
