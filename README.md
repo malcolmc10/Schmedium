@@ -18,6 +18,8 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 10. Deploy the application by using Surge.
 11. I will deploy the backend using Heroku.
 12. I will amke sure to have 75 commits minimum.
+13. I will use atleast 2 media queries in my css.
+14. I will have a carousel of articles.
 
 
 
