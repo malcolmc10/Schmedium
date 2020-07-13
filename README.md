@@ -26,15 +26,17 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 
 
 # Goals
+```
 -  Have the backend completed by Tuesday Morning.
 -  Have React app basics and rendering completed by Weds morning. 
 -  Have MVP by Thursday night.
 -  Have the backend and frontend deployed Friday evening. 
 -  Complete at least 2 Post MVPs by Tuesday morning.
-
+```
 
 
 # Libraries and Dependencies
+```
 Tailwind - tailwind is AirBnB's CSS styling tool.
 React - allows us to build Frontend.
 Ruby -  allows us to build backend.
@@ -42,7 +44,7 @@ Rails - allows us to build backend models and tables.
 Axios - used for API.
 React Router - used for Routes.
 CORS - used for API calls.
-
+```
 
 
 
