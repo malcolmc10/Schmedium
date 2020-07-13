@@ -60,7 +60,7 @@ Tablet:  https://wireframe.cc/pro/pp/c59ccf2f5358475
 https://drive.google.com/file/d/1L8nO_c1plHJolDn2ffwNnGmnlsqlD3Co/view?usp=sharing
 
 # Component Hierarchy
-
+```
 src
       
 |__ components/
@@ -79,7 +79,7 @@ src
       |__ graphics
       |__ images
        
-     
+   ```  
 
 ## Component Breakdown
 
@@ -131,7 +131,7 @@ https://drive.google.com/file/d/1W0VLVGAEkjAFl-WD4Fwd4IQX7CSbyFIL/view?usp=shari
 
 
 # Post-MVP
-
+```
 Add a search bar with ability to search for reviews based on specific movies.
 Adding a trailer to the movie pages.
 Adding a star rating system to the movies.
@@ -142,7 +142,7 @@ Adding a favicon.
 Adding a pop up when you login to enter a review.
 Ability to search other users articles with a page dedicated and public to the public. 
  Placing a randomizer on the homepager that will share a random article.
-
+```
 # Code Showcase
 
 
