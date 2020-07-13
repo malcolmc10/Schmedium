@@ -50,7 +50,7 @@ Mobile:  https://wireframe.cc/pro/pp/fef1eb7b6358462
 
 Desktop: https://wireframe.cc/pro/pp/fe4f9f610358452
 
-Tablet:  https://wireframe.cc/pro/pp/fe4f9f610358452
+Tablet:  https://wireframe.cc/pro/pp/c59ccf2f5358475
 
 
 # Component Tree
