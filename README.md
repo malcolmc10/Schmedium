@@ -19,6 +19,7 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 11. Deploy the backend using Heroku.
 12. 75 commits minimum.
 13. Placing a randomizer on the homepager that will share a random article.
+14. Placing a Carosel on the home page that will hold the articles written.
 
 
 
