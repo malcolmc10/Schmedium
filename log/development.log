@@ -674,3 +674,88 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 47ms (Views: 10.1ms | ActiveRecord: 29.2ms | Allocations: 4626)
 
 
+Started GET "/rails/info/routes" for ::1 at 2020-07-14 16:03:34 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::InfoController#routes as HTML
+  Rendering /Users/colinmalcolm/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /Users/colinmalcolm/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [44 times] (Duration: 15.7ms | Allocations: 5981)
+  Rendered /Users/colinmalcolm/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 9.5ms | Allocations: 1058)
+  Rendered /Users/colinmalcolm/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 32.7ms | Allocations: 10510)
+Completed 200 OK in 53ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 12323)
+
+
+Started POST "/users" for ::1 at 2020-07-14 18:00:31 -0400
+  [1m[35m (25.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"france", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 741ms (ActiveRecord: 0.0ms | Allocations: 60039)
+
+
+  
+NameError (undefined local variable or method `user_params' for #<UsersController:0x00007fa3f5429230>
+Did you mean?  user_path):
+  
+app/controllers/users_controller.rb:18:in `create'
+Started POST "/users" for ::1 at 2020-07-14 18:02:25 -0400
+  
+SyntaxError (/Users/colinmalcolm/General_Assembly/sei/Unit_4/week3/project4/Schmedium/app/controllers/users_controller.rb:57: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/users_controller.rb:57: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/users_controller.rb:57: syntax error, unexpected end-of-input, expecting `end'
+Started POST "/users" for ::1 at 2020-07-14 18:05:24 -0400
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"france", "password"=>"[FILTERED]"}}
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Exists? (35.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "france"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[36mUser Create (49.1ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "france"], ["password_digest", "$2a$12$P00Yv/QeCK27CjmupSbsMeHVzJxQ3Hh9BBiAB.Fme53kMNdSwVhka"], ["created_at", "2020-07-14 22:05:27.577248"], ["updated_at", "2020-07-14 22:05:27.577248"]]
+  ↳ app/controllers/users_controller.rb:20:in `create'
+  [1m[35m (75.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:20:in `create'
+Completed 201 Created in 1948ms (Views: 0.9ms | ActiveRecord: 559.7ms | Allocations: 7614)
+
+
+Started GET "/movies" for ::1 at 2020-07-14 18:06:19 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (141.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:8:in `index'
+Completed 200 OK in 210ms (Views: 47.8ms | ActiveRecord: 149.4ms | Allocations: 5821)
+
+
+Started POST "/movies/31/articles" for ::1 at 2020-07-14 18:09:58 -0400
+Processing by ArticlesController#create as */*
+  Parameters: {"article"=>{"article"=>"lalalalalalalalla"}, "movie_id"=>"31"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[35m (21.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mArticle Create (153.0ms)[0m  [1m[32mINSERT INTO "articles" ("user_id", "movie_id", "article", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "9"], ["movie_id", "31"], ["article", "lalalalalalalalla"], ["created_at", "2020-07-14 22:10:00.052923"], ["updated_at", "2020-07-14 22:10:00.052923"]]
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+Completed 500 Internal Server Error in 1029ms (ActiveRecord: 350.1ms | Allocations: 45715)
+
+
+  
+NoMethodError (undefined method `article_url' for #<ArticlesController:0x00007fa3f4f25c70>):
+  
+app/controllers/articles_controller.rb:23:in `create'
+Started POST "/movies/31/articles" for ::1 at 2020-07-14 18:10:47 -0400
+Processing by ArticlesController#create as */*
+  Parameters: {"article"=>{"article"=>"lalalalalalalalla"}, "movie_id"=>"31"}
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:19:in `authorize_request'
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:19:in `create'
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[36mArticle Create (28.7ms)[0m  [1m[32mINSERT INTO "articles" ("user_id", "movie_id", "article", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "9"], ["movie_id", "31"], ["article", "lalalalalalalalla"], ["created_at", "2020-07-14 22:10:48.586673"], ["updated_at", "2020-07-14 22:10:48.586673"]]
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articles_controller.rb:22:in `create'
+Completed 201 Created in 449ms (Views: 1.1ms | ActiveRecord: 236.2ms | Allocations: 14563)
+
+

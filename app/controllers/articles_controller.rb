@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :update, :destroy]
-
+  before_action :authorize_request, only: [:create, :update, :destroy]
   # GET /articles
   def index
     @articles = Article.all
@@ -16,9 +16,11 @@ class ArticlesController < ApplicationController
   # POST /articles
   def create
     @article = Article.new(article_params)
-
+    @movie = Movie.find(params[:movie_id])
+    @article.movie = @movie
+    @article.user = @current_user
     if @article.save
-      render json: @article, status: :created, location: @article
+      render json: @article, status: :created
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -46,6 +48,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:user_id, :movie_id, :article)
+      params.require(:article).permit(:article)
     end
 end
