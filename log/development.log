@@ -364,3 +364,313 @@ Completed 200 OK in 20ms (Views: 11.5ms | ActiveRecord: 4.7ms | Allocations: 899
   [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Colin"], ["LIMIT", 1]]
   [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Colin"], ["password_digest", "$2a$12$lScKG7ls8B/APIQ7yZ6B7O8hK74LBetL7SQtZK..O49voQX1UpqWC"], ["created_at", "2020-07-14 18:16:48.960762"], ["updated_at", "2020-07-14 18:16:48.960762"]]
   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 4]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (17.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Colin"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Colin"], ["password_digest", "$2a$12$wJMbIyRahJ37RR.sAUpZUO5jaaEr12iiZBfZS8XAM/7BgseM7uLKu"], ["created_at", "2020-07-14 18:44:20.123194"], ["updated_at", "2020-07-14 18:44:20.123194"]]
+  [1m[35m (23.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (7.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Happy Potter and the Philosophers Stone"], ["img_url", "https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg"], ["created_at", "2020-07-14 18:44:20.227657"], ["updated_at", "2020-07-14 18:44:20.227657"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (22.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["img_url", "https://media.harrypotterfanzone.com/chamber-of-secrets-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:44:20.280524"], ["updated_at", "2020-07-14 18:44:20.280524"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Prisoner of Azkaban"], ["img_url", "https://www.harrypotterfanzone.com/pictures/prisoner-of-azkaban-theatrical-poster-2/"], ["created_at", "2020-07-14 18:44:20.315333"], ["updated_at", "2020-07-14 18:44:20.315333"]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Goblet of Fire"], ["img_url", "https://media.harrypotterfanzone.com/goblet-of-fire-theatrical-poster-2.jpg"], ["created_at", "2020-07-14 18:44:20.365921"], ["updated_at", "2020-07-14 18:44:20.365921"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (2.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["img_url", "https://media.harrypotterfanzone.com/order-of-the-phoenix-theatrical-poster-3.jpg"], ["created_at", "2020-07-14 18:44:20.382101"], ["updated_at", "2020-07-14 18:44:20.382101"]]
+  [1m[35m (51.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Half Blood Prince"], ["img_url", "https://media.harrypotterfanzone.com/half-blood-prince-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:44:20.468471"], ["updated_at", "2020-07-14 18:44:20.468471"]]
+  [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 1"], ["img_url", "https://media.harrypotterfanzone.com/deathly-hallows-part-1-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:44:20.508557"], ["updated_at", "2020-07-14 18:44:20.508557"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (27.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 2"], ["img_url", "https://cdn11.bigcommerce.com/s-twbzkv97cv/images/stencil/1280x1280/products/3983/6478/HarryPotterAndTheDeathlyHallowsPart2__55018.1578185960.jpg?c=2&imbypass=on&imbypass=on"], ["created_at", "2020-07-14 18:44:20.523429"], ["updated_at", "2020-07-14 18:44:20.523429"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (1.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts and Where To Find Them"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-newt-poster.jpg"], ["created_at", "2020-07-14 18:44:20.574127"], ["updated_at", "2020-07-14 18:44:20.574127"]]
+  [1m[35m (19.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (3.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts The Crimes of Grindelwald"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-poster-2.jpg"], ["created_at", "2020-07-14 18:44:20.608943"], ["updated_at", "2020-07-14 18:44:20.608943"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (1.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 5]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (27.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (28.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "1"]]
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "2"]]
+  [1m[36mMovie Destroy (28.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "3"]]
+  [1m[36mMovie Destroy (0.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 3]]
+  [1m[35m (33.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "4"]]
+  [1m[36mMovie Destroy (0.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (30.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (1.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "5"]]
+  [1m[36mMovie Destroy (6.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 5]]
+  [1m[35m (32.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.8ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "6"]]
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (28.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "7"]]
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (34.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "8"]]
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 8]]
+  [1m[35m (31.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "9"]]
+  [1m[36mMovie Destroy (31.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 9]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "10"]]
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 10]]
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (27.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Colin"], ["LIMIT", 1]]
+  [1m[36mUser Create (25.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Colin"], ["password_digest", "$2a$12$s0AlShjC77NWzd/gN0dnNOpqf9wYXNnhv.0ZHKoYcRzKZdtD8ZezS"], ["created_at", "2020-07-14 18:49:44.182633"], ["updated_at", "2020-07-14 18:49:44.182633"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Happy Potter and the Philosophers Stone"], ["img_url", "https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg"], ["created_at", "2020-07-14 18:49:44.225716"], ["updated_at", "2020-07-14 18:49:44.225716"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (7.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (13.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["img_url", "https://media.harrypotterfanzone.com/chamber-of-secrets-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:49:44.256634"], ["updated_at", "2020-07-14 18:49:44.256634"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Prisoner of Azkaban"], ["img_url", "https://www.harrypotterfanzone.com/pictures/prisoner-of-azkaban-theatrical-poster-2/"], ["created_at", "2020-07-14 18:49:44.322495"], ["updated_at", "2020-07-14 18:49:44.322495"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (34.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (24.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Goblet of Fire"], ["img_url", "https://media.harrypotterfanzone.com/goblet-of-fire-theatrical-poster-2.jpg"], ["created_at", "2020-07-14 18:49:44.344507"], ["updated_at", "2020-07-14 18:49:44.344507"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["img_url", "https://media.harrypotterfanzone.com/order-of-the-phoenix-theatrical-poster-3.jpg"], ["created_at", "2020-07-14 18:49:44.422600"], ["updated_at", "2020-07-14 18:49:44.422600"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (43.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Half Blood Prince"], ["img_url", "https://media.harrypotterfanzone.com/half-blood-prince-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:49:44.434483"], ["updated_at", "2020-07-14 18:49:44.434483"]]
+  [1m[35m (30.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 1"], ["img_url", "https://media.harrypotterfanzone.com/deathly-hallows-part-1-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:49:44.525652"], ["updated_at", "2020-07-14 18:49:44.525652"]]
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 2"], ["img_url", "https://cdn11.bigcommerce.com/s-twbzkv97cv/images/stencil/1280x1280/products/3983/6478/HarryPotterAndTheDeathlyHallowsPart2__55018.1578185960.jpg?c=2&imbypass=on&imbypass=on"], ["created_at", "2020-07-14 18:49:44.576934"], ["updated_at", "2020-07-14 18:49:44.576934"]]
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts and Where To Find Them"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-newt-poster.jpg"], ["created_at", "2020-07-14 18:49:44.618850"], ["updated_at", "2020-07-14 18:49:44.618850"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts The Crimes of Grindelwald"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-poster-2.jpg"], ["created_at", "2020-07-14 18:49:44.628963"], ["updated_at", "2020-07-14 18:49:44.628963"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (8.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (4.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (15.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (33.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "11"]]
+  [1m[36mMovie Destroy (0.7ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 11]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (22.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "12"]]
+  [1m[36mMovie Destroy (7.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 12]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (23.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (2.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "13"]]
+  [1m[36mMovie Destroy (0.9ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (19.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "14"]]
+  [1m[36mMovie Destroy (0.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 14]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (1.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "15"]]
+  [1m[36mMovie Destroy (25.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "16"]]
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 16]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (21.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "17"]]
+  [1m[36mMovie Destroy (26.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "18"]]
+  [1m[36mMovie Destroy (31.4ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 18]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (29.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "19"]]
+  [1m[36mMovie Destroy (71.7ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 19]]
+  [1m[35m (91.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (27.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "20"]]
+  [1m[36mMovie Destroy (6.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 20]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (17.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Colin"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Colin"], ["password_digest", "$2a$12$AUZCpFX/76DOFE0TE/3oj.WAbaQWI0MCN/6yGtZFFBjqnK3zcR5VG"], ["created_at", "2020-07-14 18:50:25.077806"], ["updated_at", "2020-07-14 18:50:25.077806"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (22.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Happy Potter and the Philosophers Stone"], ["img_url", "https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg"], ["created_at", "2020-07-14 18:50:25.092699"], ["updated_at", "2020-07-14 18:50:25.092699"]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (16.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["img_url", "https://media.harrypotterfanzone.com/chamber-of-secrets-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:50:25.183778"], ["updated_at", "2020-07-14 18:50:25.183778"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (26.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Prisoner of Azkaban"], ["img_url", "https://www.harrypotterfanzone.com/pictures/prisoner-of-azkaban-theatrical-poster-2/"], ["created_at", "2020-07-14 18:50:25.239818"], ["updated_at", "2020-07-14 18:50:25.239818"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Goblet of Fire"], ["img_url", "https://media.harrypotterfanzone.com/goblet-of-fire-theatrical-poster-2.jpg"], ["created_at", "2020-07-14 18:50:25.297047"], ["updated_at", "2020-07-14 18:50:25.297047"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (75.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["img_url", "https://media.harrypotterfanzone.com/order-of-the-phoenix-theatrical-poster-3.jpg"], ["created_at", "2020-07-14 18:50:25.340091"], ["updated_at", "2020-07-14 18:50:25.340091"]]
+  [1m[35m (1902.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (1894.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Half Blood Prince"], ["img_url", "https://media.harrypotterfanzone.com/half-blood-prince-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:50:27.329871"], ["updated_at", "2020-07-14 18:50:27.329871"]]
+  [1m[35m (33.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (53.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 1"], ["img_url", "https://media.harrypotterfanzone.com/deathly-hallows-part-1-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:50:29.276307"], ["updated_at", "2020-07-14 18:50:29.276307"]]
+  [1m[35m (1334.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (60.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (379.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 2"], ["img_url", "https://cdn11.bigcommerce.com/s-twbzkv97cv/images/stencil/1280x1280/products/3983/6478/HarryPotterAndTheDeathlyHallowsPart2__55018.1578185960.jpg?c=2&imbypass=on&imbypass=on"], ["created_at", "2020-07-14 18:50:30.679492"], ["updated_at", "2020-07-14 18:50:30.679492"]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (25.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts and Where To Find Them"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-newt-poster.jpg"], ["created_at", "2020-07-14 18:50:31.143050"], ["updated_at", "2020-07-14 18:50:31.143050"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (37.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts The Crimes of Grindelwald"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-poster-2.jpg"], ["created_at", "2020-07-14 18:50:31.179671"], ["updated_at", "2020-07-14 18:50:31.179671"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Destroy (24.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 7]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (26.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (1.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "21"]]
+  [1m[36mMovie Destroy (2.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (24.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "22"]]
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "23"]]
+  [1m[36mMovie Destroy (1.9ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 23]]
+  [1m[35m (31.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (19.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "24"]]
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 24]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "25"]]
+  [1m[36mMovie Destroy (0.7ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 25]]
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (17.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "26"]]
+  [1m[36mMovie Destroy (0.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "27"]]
+  [1m[36mMovie Destroy (32.8ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 27]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (17.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "28"]]
+  [1m[36mMovie Destroy (1.1ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 28]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "29"]]
+  [1m[36mMovie Destroy (14.0ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."movie_id" = $1[0m  [["movie_id", "30"]]
+  [1m[36mMovie Destroy (0.9ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (13.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Colin"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Colin"], ["password_digest", "$2a$12$S9l0SPhQLYz0PebRDjzJo.YOsOiMOP3Os4idiB7zM.Lh3RZobk2iO"], ["created_at", "2020-07-14 18:51:03.738055"], ["updated_at", "2020-07-14 18:51:03.738055"]]
+  [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (2.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Happy Potter and the Philosophers Stone"], ["img_url", "https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg"], ["created_at", "2020-07-14 18:51:03.774872"], ["updated_at", "2020-07-14 18:51:03.774872"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (22.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["img_url", "https://media.harrypotterfanzone.com/chamber-of-secrets-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:51:03.844574"], ["updated_at", "2020-07-14 18:51:03.844574"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Prisoner of Azkaban"], ["img_url", "https://www.harrypotterfanzone.com/pictures/prisoner-of-azkaban-theatrical-poster-2/"], ["created_at", "2020-07-14 18:51:03.878424"], ["updated_at", "2020-07-14 18:51:03.878424"]]
+  [1m[35m (26.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Goblet of Fire"], ["img_url", "https://media.harrypotterfanzone.com/goblet-of-fire-theatrical-poster-2.jpg"], ["created_at", "2020-07-14 18:51:03.926268"], ["updated_at", "2020-07-14 18:51:03.926268"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (30.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["img_url", "https://media.harrypotterfanzone.com/order-of-the-phoenix-theatrical-poster-3.jpg"], ["created_at", "2020-07-14 18:51:03.942705"], ["updated_at", "2020-07-14 18:51:03.942705"]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (3.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Half Blood Prince"], ["img_url", "https://media.harrypotterfanzone.com/half-blood-prince-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:51:04.026070"], ["updated_at", "2020-07-14 18:51:04.026070"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (24.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 1"], ["img_url", "https://media.harrypotterfanzone.com/deathly-hallows-part-1-theatrical-poster.jpg"], ["created_at", "2020-07-14 18:51:04.043126"], ["updated_at", "2020-07-14 18:51:04.043126"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Harry Potter and the Deathly Hallows Part 2"], ["img_url", "https://cdn11.bigcommerce.com/s-twbzkv97cv/images/stencil/1280x1280/products/3983/6478/HarryPotterAndTheDeathlyHallowsPart2__55018.1578185960.jpg?c=2&imbypass=on&imbypass=on"], ["created_at", "2020-07-14 18:51:04.076448"], ["updated_at", "2020-07-14 18:51:04.076448"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (26.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts and Where To Find Them"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-newt-poster.jpg"], ["created_at", "2020-07-14 18:51:04.094128"], ["updated_at", "2020-07-14 18:51:04.094128"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "img_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Fantastic Beasts The Crimes of Grindelwald"], ["img_url", "https://media.harrypotterfanzone.com/fantastic-beasts-poster-2.jpg"], ["created_at", "2020-07-14 18:51:04.130064"], ["updated_at", "2020-07-14 18:51:04.130064"]]
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (16.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArticle Create (3.0ms)[0m  [1m[32mINSERT INTO "articles" ("user_id", "movie_id", "article", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", "8"], ["movie_id", "31"], ["article", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet in mi eget faucibus."], ["created_at", "2020-07-14 18:51:04.204092"], ["updated_at", "2020-07-14 18:51:04.204092"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mMovie Load (34.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mMovie Load (69.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[36mArticle Load (1.6ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (71.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Started GET "/movies" for ::1 at 2020-07-14 15:34:59 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (9.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 18.8ms | ActiveRecord: 16.4ms | Allocations: 6626)
+
+
+Started GET "/articles" for ::1 at 2020-07-14 15:36:59 -0400
+Processing by ArticlesController#index as HTML
+  [1m[36mArticle Load (12.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8:in `index'
+Completed 200 OK in 40ms (Views: 15.3ms | ActiveRecord: 17.7ms | Allocations: 5056)
+
+
+Started GET "/users" for ::1 at 2020-07-14 15:37:06 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 10.1ms | ActiveRecord: 29.2ms | Allocations: 4626)
+
+
