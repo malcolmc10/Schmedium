@@ -2,9 +2,14 @@ import React, {Component} from 'react'
 import Header from './Shared/Header'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Footer from './Shared/Footer'
+import { getMovies } from './Components/GetMovies'
 
 
 export default class App extends Component {
+  componentDidMount() {
+    getMovies();
+  }
+  
   render() {
     return (
       <div>
