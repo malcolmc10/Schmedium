@@ -4,16 +4,18 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Footer from './Shared/Footer'
 
 
-export default function App() {
-  return (
-    <div>
-      
-      <Header />
-      
-      <Footer />
-    </div>
-  )
+export default class App extends Component {
+  render() {
+    return (
+      <div>
+        <Header/>
+        <Footer/>
+      </div>
+    )
+  }
 }
+
+
 
 
 
