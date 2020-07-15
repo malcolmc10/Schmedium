@@ -1,38 +1,45 @@
 import React from 'react'
 import logo from '../assets/logo.png'
-import hamburgerIcon from '../assets/zondicons/menu.svg'
 
 
-export default function Header() {
+
+
+export default function Header(props) {
     
 
   return (
-    <div>
-      <ul>
+    <div id="header">
+      <ul className="flex sm:justify-evenly items-center py-4 text-xl ttext-black justify-between">
+        
 
-        <li>
-          <a href="/">My Articles</a>
+        <li className="hidden sm:block">
+          <a href="/" className="text-black">My Articles</a>
+        </li>
+        <li className="hidden sm:block">
+          <a href="/">Sorting Hat</a>
         </li>
 
-        <li>
+        <li className="hidden sm:block">
           <a href="/">Blogiosa</a>
         </li>
 
         <li>
-          <a href="/"><img src={logo} alt="logo" />
+          <a href="/"><img src={logo} alt="logo" className="w-0" />
           </a>
         </li>
 
-        <li>
+        <li className="hidden sm:block">
           <a href="/">About</a>
         </li>
 
 
-        <li>
-          <a href="/">Log In</a>
+        <li className="hidden sm:block">
+          <a href="/" className="text-black">Log In</a>
         </li>
 
+
       </ul>
+      
     </div>
   )
 }
