@@ -30,7 +30,7 @@ export default class Create extends Component {
                     <input type='text'
                     value={this.state.article}
                     onChange={this.handleChange}/>
-                    
+
                 </label>
                 <button>It's Blogiosa not Blogiossaaa</button>
             </form>

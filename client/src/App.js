@@ -9,6 +9,8 @@ import { loginUser, registerUser, removeToken, verifyUser } from './Services/aut
 import Login from './Components/Login'
 import Register from './Components/Register'
 import './tailwind.output.css'
+// import Create from './Pages/Create'
+
 
 export default class App extends Component {
   state = {
@@ -60,15 +62,20 @@ export default class App extends Component {
     return (
       <div className="content-center">
         <Header 
-        currentUser={this.state.currentUser}
-        handleLogout={this.handleLogout}
+        // handleChange={this.handleChange}
+        // userData={this.state.userData}
+        // handleLogin={this.loginSubmit}
+        // currentUser={this.state.currentUser}
         />
+
+
+
         <div>
           {this.state.articles && this.state.articles.map(article => (
             <div className='article'>
-              <Link to={`/article/${article.id}`}>
-                <h5>{article.article}</h5>
-                <img src={article.movie.img_url} alt="HarryPotter" />
+              <Link to={`/article/${article.id}`} >
+                <h5 class="font-mono text-lg text-gray-800 text-center">{article.article}</h5>
+                <img src={article.movie.img_url} alt="HarryPotter"/>
               </Link>
             </div>
           ))}
@@ -78,6 +85,33 @@ export default class App extends Component {
       
         </div>
         <Footer />
+
+        <Route path='/register'>
+          <Register
+            handleChange={this.handleChange}
+            userData={this.state.userData}
+            handleRegister={this.handleRegister}
+          /></Route>
+
+          
+          <Route path='/login' render={(props) => (
+          <Login
+            {...props}
+            handleLogin={handleLogin}
+          />
+        )} />
+
+        {/* <Route path='/articles/new' render={(props) => (
+          <Create
+          {...props}
+          handleArticleCreate={this.handleArticleCreate}
+          />
+
+        )}></Route> */}
+          
+
+
+
       </div>
     )
   }
@@ -113,29 +147,4 @@ export default class App extends Component {
 
 
 
-// import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;

@@ -34,7 +34,7 @@ export default function Header(props) {
         </li>
 
         <li className="hidden sm:block">
-          <a href="/">Register</a>
+          <a href="/Register">Register</a>
         </li>
 
         <li className="hidden sm:block">
