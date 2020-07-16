@@ -62,63 +62,62 @@ export default class App extends Component {
     const { handleLogin, handleRegister } = this.props;
     return (
       <div className="content-center">
-        <Header 
-        // handleChange={this.handleChange}
-        // userData={this.state.userData}
-        // handleLogin={this.loginSubmit}
-        // currentUser={this.state.currentUser}
+        <Header
+
         />
 
+      
+
+
+
+        <Route exact path='/'>
+          <div className="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
+            <Main
+              articles={this.state.articles}
+            />
+          </div>
+
+          <div id="about">
+            <About />
+          </div>
+          
+        </Route>
 
         
-          {/* <Main currentUser={this.state.currentUser}
-          handleLogin={this.handleLogin}
-          handleRegister={this.handleRegister} /> */}
 
-          
-
-          <Route exact path='/'>
-          <Main 
-        articles={this.state.articles}
-        />
-        <div id="about">
-        <About/>
-        </div>
-          </Route>
-
-<Route path='/register'>
+        <Route path='/register'>
           <Register
             handleChange={this.handleChange}
             userData={this.state.userData}
             handleRegister={this.handleRegister}
           /></Route>
 
-          
-          <Route path='/login' render={(props) => (
+
+        <Route path='/login' render={(props) => (
           <Login
             {...props}
             handleLogin={handleLogin}
           />
         )} />
-      
-      <Route path='/create' render={(props) => (
+
+        <Route path='/create' render={(props) => (
           <Create
-          {...props}
-          handleArticleCreate={this.handleArticleCreate}
+            {...props}
+            handleArticleCreate={this.handleArticleCreate}
           />
 
-        )}/>
+        )} />
 
-        
-        
-        
-        
+
+
+
+
         <Footer />
 
-        
 
-        
-          
+
+
+
 
 
 

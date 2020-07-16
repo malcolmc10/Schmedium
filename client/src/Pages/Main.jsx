@@ -7,8 +7,8 @@ export default function Main(props) {
                 {props.articles && props.articles.map(article => (
                     <div className='article'>
                         <Link to={`/article/${article.id}`} >
-                            <h5 class="font-mono text-lg text-gray-800 text-center">{article.article}</h5>
-                            <img src={article.movie.img_url} alt="HarryPotter" />
+                            <h5 className="font-sans text-base text-gray-800">{article.article}</h5>
+                            <img src={article.movie.img_url} alt="HarryPotter" className="h-64"/>
                         </Link>
                     </div>
                 ))}

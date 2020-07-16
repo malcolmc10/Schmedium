@@ -23,29 +23,29 @@ export default class Register extends Component {
         e.preventDefault();
         handleRegister(this.state);
         history.push('/user');
-      }} class="w-full max-w-sm border-2 border-red-800 text-2xl p-32 content-center">
-        <h3>Register</h3>
+      }} className="my-5 mx-auto max-w-xl">
+        <h3 className="content-center text-xl m-8 ">Register Today!</h3>
         <label>
-          Username:
+          <h1 className="content-center text-xl m-8 " >Username:</h1>
           <input
             type="text"
             name="username"
             value={username}
             onChange={this.handleChange}
-            className="border-2 border-red-800"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
         </label>
         <br />
         <label>
-          Password:
+          <h1 className="content-center text-xl m-8 " >Password:</h1>
           <input
             type="password"
             name="password"
             value={password}
             onChange={this.handleChange}
-          className="border-2 border-red-800"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
         </label>
         <br />
-        <button className="border-2 border-red-800">Submit</button>
+        <button className="bg-red-800 hover:bg-red-600 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline">Submit</button>
       </form>
     )
   }
