@@ -35,7 +35,7 @@ export default class App extends Component {
             <div className='article'>
               <Link to={`/article/${article.id}`}>
                 <h5>{article.article}</h5>
-                <img src={article.movie_id} />
+                <img src={article.movie_id} alt="HarryPotter" />
               </Link>
             </div>
           ))}
