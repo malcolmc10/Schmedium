@@ -5,18 +5,15 @@ import logo from '../assets/logo.png'
 
 
 export default function Header(props) {
-    
+
 
   return (
     <div id="header">
       <ul className="flex sm:justify-evenly items-center py-4 text-xl ttext-black justify-between">
-        
+
 
         <li className="hidden sm:block">
           <a href="/" className="text-black">My Articles</a>
-        </li>
-        <li className="hidden sm:block">
-          <a href="/">Sorting Hat</a>
         </li>
 
         <li className="hidden sm:block">
@@ -32,14 +29,17 @@ export default function Header(props) {
           <a href="/">About</a>
         </li>
 
+        <li className="hidden sm:block">
+          <a href="/">Register</a>
+        </li>
 
         <li className="hidden sm:block">
-          <a href="/" className="text-black">Log In</a>
+          <a href="/login" className="text-black">Log In</a>
         </li>
 
 
       </ul>
-      
+
     </div>
   )
 }

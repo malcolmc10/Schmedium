@@ -1,11 +1,7 @@
 import api from './api-helper'
 
 
-export const getMovies = async () => {
+export const Movies = async () => {
     const resp = await api.get('/movies');
     // debugger;
-
-
-    
-
 }

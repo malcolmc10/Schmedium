@@ -4,9 +4,19 @@ import Footer from './Shared/Footer'
 
 export default function Main() {
     return (
-        <div>
-            <Header/>
-            <Footer/>
-        </div>
+        <main>
+             <Route path='/login' render={(props) => (
+          <Login
+            {...props}
+            handleLogin={handleLogin}
+          />
+        )} />
+        <Route path='/register' render={(props) => (
+          <Register
+            {...props}
+            handleRegister={handleRegister}
+          />
+        )} />
+        </main>
     )
 }

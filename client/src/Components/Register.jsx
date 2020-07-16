@@ -15,7 +15,7 @@ export default class Register extends Component {
   }
 
   render() {
-    const { username, email, password } = this.state;
+    const { username, password } = this.state;
     const { handleRegister, history } = this.props;
 
     return (
@@ -31,16 +31,6 @@ export default class Register extends Component {
             type="text"
             name="username"
             value={username}
-            onChange={this.handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Email:
-          <input
-            type="text"
-            name="email"
-            value={email}
             onChange={this.handleChange}
           />
         </label>
