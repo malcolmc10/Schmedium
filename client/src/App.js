@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import Header from './Shared/Header'
-// import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Footer from './Shared/Footer'
 import { getArticles } from './Services/api-helper'
 import { Link, Route, withRouter } from 'react-router-dom'
 import { loginUser, registerUser, removeToken, verifyUser } from './Services/auth'
-// import Main from './Pages/Main'
+import Main from './Pages/Main'
 import Login from './Components/Login'
 import Register from './Components/Register'
 import './tailwind.output.css'
-// import Create from './Pages/Create'
+import Create from './Pages/Create'
+import About from './Components/About'
+
 
 
 export default class App extends Component {
@@ -69,24 +70,23 @@ export default class App extends Component {
         />
 
 
-
-        <div>
-          {this.state.articles && this.state.articles.map(article => (
-            <div className='article'>
-              <Link to={`/article/${article.id}`} >
-                <h5 class="font-mono text-lg text-gray-800 text-center">{article.article}</h5>
-                <img src={article.movie.img_url} alt="HarryPotter"/>
-              </Link>
-            </div>
-          ))}
+        
           {/* <Main currentUser={this.state.currentUser}
           handleLogin={this.handleLogin}
           handleRegister={this.handleRegister} /> */}
-      
-        </div>
-        <Footer />
 
-        <Route path='/register'>
+          
+
+          <Route exact path='/'>
+          <Main 
+        articles={this.state.articles}
+        />
+        <div id="about">
+        <About/>
+        </div>
+          </Route>
+
+<Route path='/register'>
           <Register
             handleChange={this.handleChange}
             userData={this.state.userData}
@@ -100,14 +100,24 @@ export default class App extends Component {
             handleLogin={handleLogin}
           />
         )} />
-
-        {/* <Route path='/articles/new' render={(props) => (
+      
+      <Route path='/create' render={(props) => (
           <Create
           {...props}
           handleArticleCreate={this.handleArticleCreate}
           />
 
-        )}></Route> */}
+        )}/>
+
+        
+        
+        
+        
+        <Footer />
+
+        
+
+        
           
 
 

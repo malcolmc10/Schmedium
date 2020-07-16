@@ -23,7 +23,7 @@ export default class Login extends Component {
         e.preventDefault();
         handleLogin(this.state);
         history.push('/')
-      }}>
+      }} >
         <h3>Login</h3>
         <label>
           Username:
@@ -46,6 +46,7 @@ export default class Login extends Component {
         </label>
         <br />
         <Link to='/register'>Register</Link>
+        <br></br>
         <button>Submit</button>
       </form>
     )

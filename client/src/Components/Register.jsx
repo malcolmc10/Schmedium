@@ -22,8 +22,8 @@ export default class Register extends Component {
       <form onSubmit={(e) => {
         e.preventDefault();
         handleRegister(this.state);
-        history.push('/');
-      }}>
+        history.push('/user');
+      }} class="w-full max-w-sm border-2 border-red-800 text-2xl p-32 content-center">
         <h3>Register</h3>
         <label>
           Username:
@@ -32,7 +32,7 @@ export default class Register extends Component {
             name="username"
             value={username}
             onChange={this.handleChange}
-          />
+            className="border-2 border-red-800"/>
         </label>
         <br />
         <label>
@@ -42,10 +42,10 @@ export default class Register extends Component {
             name="password"
             value={password}
             onChange={this.handleChange}
-          />
+          className="border-2 border-red-800"/>
         </label>
         <br />
-        <button>Submit</button>
+        <button className="border-2 border-red-800">Submit</button>
       </form>
     )
   }

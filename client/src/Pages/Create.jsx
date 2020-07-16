@@ -1,7 +1,6 @@
 
-import Header from './Shared/Header'
-import Footer from './Shared/Footer'
 import React, { Component } from 'react'
+
 
 export default class Create extends Component {
     state = {
@@ -19,6 +18,8 @@ export default class Create extends Component {
         const {handleArticleCreate, history} = this.props
 
         return (
+            <div>
+                
             <form onSubmit={(e) => {
                 e.preventDefault();
                 handleArticleCreate(this.state);
@@ -35,6 +36,7 @@ export default class Create extends Component {
                 <button>It's Blogiosa not Blogiossaaa</button>
             </form>
             
+            </div>
             
             
             
