@@ -71,10 +71,11 @@ export default class App extends Component {
 
 
         <Route exact path='/'>
-          <div className="bg-gray-200 min-h-screen p-8 flex items-center justify-center">
+          <div className=" min-h-screen p-8 flex items-center justify-center">
             <Main
               articles={this.state.articles}
             />
+
           </div>
 
           <div id="about">
@@ -113,13 +114,6 @@ export default class App extends Component {
 
 
         <Footer />
-
-
-
-
-
-
-
 
       </div>
     )

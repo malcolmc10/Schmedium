@@ -2,8 +2,6 @@ import React, {Component} from 'react'
 import {Route} from 'react-router-dom'
 import Login from './Login'
 import Register from './Register'
-import Header from './Shared/Header'
-import Footer from './Shared/Footer'
 import { getAllArticles, postArticle, putArticle, deleteArticle } from '../services/articles'
 
 
@@ -53,7 +51,7 @@ export default class Main extends Component {
       return (
           
         <main>
-            <Header/>
+            
           <Route path='/login' render={(props) => (
             <Login
               {...props}
@@ -95,12 +93,12 @@ export default class Main extends Component {
           }} />
           <Route path='/articles/:id' render={(props) => {
             const { id } = props.match.params;
-            return <FoodItem
+            return <ArticleItem
               id={id}
               articles={this.state.articles}
             />
           }} />
-          <Footer />
+          
         </main>
       )
     }

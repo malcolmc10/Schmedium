@@ -18,13 +18,15 @@ export default class Register extends Component {
     const { username, password } = this.state;
     const { handleRegister, history } = this.props;
 
+    
+
     return (
       <form onSubmit={(e) => {
         e.preventDefault();
         handleRegister(this.state);
         history.push('/user');
-      }} className="my-5 mx-auto max-w-xl">
-        <h3 className="content-center text-xl m-8 ">Register Today!</h3>
+      }} className="my-5 mx-auto max-w-xl shadow-md p-8">
+        <h3 className="content-center text-xl m-8">Register Today!</h3>
         <label>
           <h1 className="content-center text-xl m-8 " >Username:</h1>
           <input
@@ -47,6 +49,11 @@ export default class Register extends Component {
         <br />
         <button className="bg-red-800 hover:bg-red-600 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline">Submit</button>
       </form>
+
+      
     )
+    
   }
+  
 }
+
