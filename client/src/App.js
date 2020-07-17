@@ -63,7 +63,8 @@ export default class App extends Component {
     return (
       <div className="content-center">
         <Header
-
+        currentUser={this.state.currentUser}
+        handleLogout={this.handleLogout}
         />
 
       
@@ -74,6 +75,8 @@ export default class App extends Component {
           <div className=" min-h-screen p-8 flex items-center justify-center">
             <Main
               articles={this.state.articles}
+              currentUser={this.state.currentUser}
+
             />
 
           </div>
@@ -91,13 +94,15 @@ export default class App extends Component {
             handleChange={this.handleChange}
             userData={this.state.userData}
             handleRegister={this.handleRegister}
+            
           /></Route>
 
 
         <Route path='/login' render={(props) => (
           <Login
             {...props}
-            handleLogin={handleLogin}
+            // handleLogin={handleLogin}
+            handleLogin={this.handleLogin}
           />
         )} />
 
