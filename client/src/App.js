@@ -10,6 +10,7 @@ import Register from './Components/Register'
 import './tailwind.output.css'
 import Create from './Pages/Create'
 import About from './Components/About'
+import UpdateArticle from './Components/UpdateArticle'
 
 
 
@@ -23,9 +24,6 @@ export default class App extends Component {
     currentUser: null
   }
 
-  componentDidMount() {
-    this.handleVerify();
-  }
 
   handleLogin = async (userData) => {
     const currentUser = await loginUser(userData);
@@ -52,22 +50,26 @@ export default class App extends Component {
   }
 
   componentDidMount = async () => {
+    const currentUser = await this.handleVerify()
     const articles = await getArticles()
     this.setState({
-      articles
+      articles,
+      currentUser
     })
   }
+
+
 
   render() {
     const { handleLogin, handleRegister } = this.props;
     return (
       <div className="content-center">
         <Header
-        currentUser={this.state.currentUser}
-        handleLogout={this.handleLogout}
+          currentUser={this.state.currentUser}
+          handleLogout={this.handleLogout}
         />
 
-      
+
 
 
 
@@ -84,24 +86,24 @@ export default class App extends Component {
           <div id="about">
             <About />
           </div>
-          
+
         </Route>
 
-        
+
 
         <Route path='/register'>
           <Register
             handleChange={this.handleChange}
             userData={this.state.userData}
             handleRegister={this.handleRegister}
-            
+
           /></Route>
 
 
         <Route path='/login' render={(props) => (
           <Login
             {...props}
-            // handleLogin={handleLogin}
+            
             handleLogin={this.handleLogin}
           />
         )} />
@@ -114,9 +116,17 @@ export default class App extends Component {
 
         )} />
 
+          <Route path='/articles/:id/edit' render={(props) => {
+            const {id} = props.match.params;
+            const newArticle = this.state.articles.find(article => article.id === parseInt(id));
 
-
-
+            return <UpdateArticle 
+            article ={newArticle}/>
+          }}
+          
+          
+          
+          />
 
         <Footer />
 

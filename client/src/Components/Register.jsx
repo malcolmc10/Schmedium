@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import About from '../Components/About'
 
 export default class Register extends Component {
   state = {
@@ -17,7 +18,7 @@ export default class Register extends Component {
     const { username, password } = this.state;
     const { handleRegister, history } = this.props;
 
-    
+      
 
     return (
       <form onSubmit={(e) => {
@@ -33,7 +34,7 @@ export default class Register extends Component {
             name="username"
             value={username}
             onChange={this.handleChange}
-            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none" />
         </label>
         <br />
         <label>
@@ -43,15 +44,15 @@ export default class Register extends Component {
             name="password"
             value={password}
             onChange={this.handleChange}
-            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none" />
         </label>
         <br />
         <button className="bg-red-800 hover:bg-red-600 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline">Submit</button>
       </form>
-
+    
       
     )
-    
+      
   }
   
 }

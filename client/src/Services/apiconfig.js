@@ -3,8 +3,9 @@ import Axios from 'axios'
 
 let apiUrl
 
+
 const apiUrls = {
-    // production: 'my heroku url goes here',
+
     development: 'http://localhost:3000/'
 }
 

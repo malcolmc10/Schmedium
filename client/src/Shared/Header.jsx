@@ -9,7 +9,7 @@ export default function Header(props) {
 
   return (
     <div id="header" className="">
-      <ul className="flex sm:justify-evenly items-center py-4 text-xl bg-gray-200 text-red-900 justify-between">
+      <ul className="flex sm:justify-evenly items-center py-4 text-xl bg-gray-200 text-red-900 justify-between shadow-md">
       <li className="sm:hidden">
           <a href="/" >
             <img src={hamburgerIcon} alt="hamburger icon" className="w-4" />

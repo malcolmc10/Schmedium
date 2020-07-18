@@ -32,7 +32,7 @@ export default class Login extends Component {
             name="username"
             value={username}
             onChange={this.handleChange}
-            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none" />
         </label>
         <br />
         <label>
@@ -42,7 +42,7 @@ export default class Login extends Component {
             name="password"
             value={password}
             onChange={this.handleChange}
-            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none"/>
+            className="border border-gray-400 rounded-lg py-2 px-4 mb-4 block w-full appearance-none" />
         </label>
         <br />
         <Link to='/register' ><button className="bg-yellow-500 hover:bg-yellow-400 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline my-5">Register</button></Link>
