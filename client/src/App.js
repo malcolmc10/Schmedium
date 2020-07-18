@@ -11,6 +11,7 @@ import './tailwind.output.css'
 import Create from './Pages/Create'
 import About from './Components/About'
 import UpdateArticle from './Components/UpdateArticle'
+import {updateArticle} from './Services/api-helper'
 
 
 
@@ -58,6 +59,19 @@ export default class App extends Component {
     })
   }
 
+  handleUpdate = async (id, articleData) => {
+    const newArticle = await updateArticle(id, articleData)
+    this.setState (prevState => ({
+      articles:prevState.articles.map(article => (article.id == newArticle.id ? newArticle : article))
+    })) 
+  }
+
+  // handleDelete = async (id, articleData) => {
+  //   await deleteArticle(id);
+  //   this.setState(prevState => ({
+  //     articles: prevState.articles.filter(article => article.id !== id)
+  //   }))
+  // }
 
 
   render() {
@@ -116,17 +130,20 @@ export default class App extends Component {
 
         )} />
 
-          <Route path='/articles/:id/edit' render={(props) => {
+          {this.state.articles && <Route path='/article/:id/edit' render={(props) => {
             const {id} = props.match.params;
+
             const newArticle = this.state.articles.find(article => article.id === parseInt(id));
 
             return <UpdateArticle 
+            {...props}
+            handleUpdate = {this.handleUpdate}
             article ={newArticle}/>
           }}
           
+          />}
+
           
-          
-          />
 
         <Footer />
 

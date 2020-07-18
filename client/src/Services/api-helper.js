@@ -21,6 +21,11 @@ export const createArticle = async (movie_id, articleData) => {
   return response.data
 }
 
+export const updateArticle = async (id, articleData) => {
+  const response = await api.put(`/movies/1/articles/${id}`, {article: articleData})
+  return response.data
+}
+
 //   export const add = async (id, articleInfo) => {
 //     const response = await api.post(`/articles/${id}/movies`, { movie: movieInfo })
 //     return response.data

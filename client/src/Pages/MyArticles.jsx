@@ -39,7 +39,7 @@ export default class Main extends Component {
       }))
     }
   
-    handleArticleDelete = async (id) => {
+    deleteArticle = async (id) => {
       await deleteArticle(id);
       this.setState(prevState => ({
         articles: prevState.articles.filter(article => article.id !== id)
