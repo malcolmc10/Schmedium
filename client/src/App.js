@@ -12,6 +12,9 @@ import Create from './Pages/Create'
 import About from './Components/About'
 import UpdateArticle from './Components/UpdateArticle'
 import {updateArticle} from './Services/api-helper'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Carousel from './Components/Carousel.jsx'
 
 
 
@@ -82,9 +85,9 @@ export default class App extends Component {
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
         />
-
-
-
+      <div className="m-50">
+      <Carousel/>
+</div>
 
 
         <Route exact path='/'>
