@@ -11,7 +11,7 @@ export default function Main(props) {
                         <img src={article.movie.img_url} alt="HarryPotter" className="h-48 sm:h-auto sm:w-48 md:w-64 flex-none bg-cover bg-center rounded rounded-t sm:rounded sm:rounded-l text-center overflow-hidden" />
                     </Link>
                     <Link to={`/article/${article.id}/edit`}><button className="bg-red-800 hover:bg-red-600 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline m-4">Edit</button></Link>
-                    <button onClick={() => props.handleDelete(article.id)} className="bg-red-800 hover:bg-red-600 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline m-4">Delete</button>
+                    <button onClick={() => props.handleDelete(article.id)} className="bg-yellow-400 hover:bg-yellow-300 text-white py-2 px-5 rounded focus:outline-none focus:shadow-outline m-4">Delete</button>
                 </div>
             ))}
 
