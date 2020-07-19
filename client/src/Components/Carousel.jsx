@@ -48,7 +48,7 @@ export default class SimpleSlider extends React.Component {
       return (
         <Slider {...settings}>
           <div className="" >
-            <img src='https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg' alt='HP1' className="h-64"/>
+            <img src='https://media.harrypotterfanzone.com/philosophers-stone-teaser-poster.jpg' alt='HP1' className="h-64"></img>
           </div>
           <div>
           <img src='https://media.harrypotterfanzone.com/chamber-of-secrets-theatrical-poster.jpg' alt='HP1' className="h-64"/>
@@ -79,3 +79,4 @@ export default class SimpleSlider extends React.Component {
     }
   }
 
+//   used the react slider library to make the carousel.

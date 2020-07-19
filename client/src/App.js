@@ -69,8 +69,8 @@ export default class App extends Component {
     })) 
   }
 
-  // handleDelete = async (id, articleData) => {
-  //   await deleteArticle(id);
+  // handleDelete = async (id) => {
+  //   await handleDelete(id);
   //   this.setState(prevState => ({
   //     articles: prevState.articles.filter(article => article.id !== id)
   //   }))
@@ -85,7 +85,7 @@ export default class App extends Component {
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
         />
-      <div className="m-50">
+      <div className="m-50 bg-red-900 border-2 border-gray-200 my-2">
       <Carousel/>
 </div>
 

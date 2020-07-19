@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {Route} from 'react-router-dom'
 import Login from './Login'
 import Register from './Register'
-import { getAllArticles, postArticle, putArticle, deleteArticle } from '../services/articles'
+import { getAllArticles, postArticle, putArticle, handleDelete } from '../services/articles'
 
 
 export default class Main extends Component {
@@ -39,8 +39,8 @@ export default class Main extends Component {
       }))
     }
   
-    deleteArticle = async (id) => {
-      await deleteArticle(id);
+    handleDelete = async (id) => {
+      await handleDelete(id);
       this.setState(prevState => ({
         articles: prevState.articles.filter(article => article.id !== id)
       }))
