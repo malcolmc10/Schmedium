@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from './Shared/Header'
 import Footer from './Shared/Footer'
-import { getArticles } from './Services/api-helper'
+import { getArticles, deleteArticle } from './Services/api-helper'
 import { Link, Route, withRouter } from 'react-router-dom'
 import { loginUser, registerUser, removeToken, verifyUser } from './Services/auth'
 import Main from './Pages/Main'
@@ -11,10 +11,11 @@ import './tailwind.output.css'
 import Create from './Pages/Create'
 import About from './Components/About'
 import UpdateArticle from './Components/UpdateArticle'
-import {updateArticle} from './Services/api-helper'
+import { updateArticle } from './Services/api-helper'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Carousel from './Components/Carousel.jsx'
+
 
 
 
@@ -64,17 +65,17 @@ export default class App extends Component {
 
   handleUpdate = async (id, articleData) => {
     const newArticle = await updateArticle(id, articleData)
-    this.setState (prevState => ({
-      articles:prevState.articles.map(article => (article.id == newArticle.id ? newArticle : article))
-    })) 
+    this.setState(prevState => ({
+      articles: prevState.articles.map(article => (article.id == newArticle.id ? newArticle : article))
+    }))
   }
 
-  // handleDelete = async (id) => {
-  //   await handleDelete(id);
-  //   this.setState(prevState => ({
-  //     articles: prevState.articles.filter(article => article.id !== id)
-  //   }))
-  // }
+  handleDelete = async (id) => {
+    await deleteArticle(id);
+    this.setState(prevState => ({
+      articles: prevState.articles.filter(article => article.id !== id)
+    }))
+  }
 
 
   render() {
@@ -85,9 +86,9 @@ export default class App extends Component {
           currentUser={this.state.currentUser}
           handleLogout={this.handleLogout}
         />
-      <div className="m-50 bg-red-900 border-2 border-gray-200 my-2">
-      <Carousel/>
-</div>
+        <div className="m-50 bg-red-900 border-2 border-gray-200 my-2">
+          <Carousel />
+        </div>
 
 
         <Route exact path='/'>
@@ -95,7 +96,7 @@ export default class App extends Component {
             <Main
               articles={this.state.articles}
               currentUser={this.state.currentUser}
-
+              deleteArticle={this.handleDelete}
             />
 
           </div>
@@ -120,7 +121,7 @@ export default class App extends Component {
         <Route path='/login' render={(props) => (
           <Login
             {...props}
-            
+
             handleLogin={this.handleLogin}
           />
         )} />
@@ -133,20 +134,21 @@ export default class App extends Component {
 
         )} />
 
-          {this.state.articles && <Route path='/article/:id/edit' render={(props) => {
-            const {id} = props.match.params;
+        {this.state.articles && <Route path='/article/:id/edit' render={(props) => {
+          const { id } = props.match.params;
 
-            const newArticle = this.state.articles.find(article => article.id === parseInt(id));
+          const newArticle = this.state.articles.find(article => article.id === parseInt(id));
 
-            return <UpdateArticle 
+          return <UpdateArticle
             {...props}
-            handleUpdate = {this.handleUpdate}
-            article ={newArticle}/>
-          }}
-          
-          />}
+            handleUpdate={this.handleUpdate}
+            article={newArticle} />
+        }}
 
-          
+        />}
+
+
+
 
         <Footer />
 

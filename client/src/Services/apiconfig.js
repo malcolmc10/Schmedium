@@ -1,22 +1,12 @@
-import Axios from 'axios'
+import axios from 'axios'
 
+const baseUrl = process.env.NODE_ENV === 'production' ? `https://schmedium-api.herokuapp.com/`
+: 'http://localhost:3000' 
 
-let apiUrl
-
-
-const apiUrls = {
-
-    development: 'http://localhost:3000/'
-}
-
-if (window.location.hostname === 'localhost') {
-    apiUrl = apiUrls.development
-} else {
-    apiUrl = apiUrls.production
-}
-
-const api = Axios.create({
-    baseURL: apiUrl,
+const api = axios.create({
+  baseURL: baseUrl
 })
+
+
 
 export default api

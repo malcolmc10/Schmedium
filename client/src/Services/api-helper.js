@@ -1,11 +1,6 @@
 import api from './apiconfig'
 
-// const baseUrl = process.env.NODE_ENV === 'production' ? `https://git.heroku.com/schmedium-api.git`
-// : 'http://localhost:3000' 
 
-// const api = axios.create({
-//   baseURL: baseUrl
-// })
 
 export const getArticles = async () => {
   const response = await api.get(`movies/1/articles`)
@@ -26,6 +21,10 @@ export const updateArticle = async (id, articleData) => {
   return response.data
 }
 
+export const deleteArticle = async (id) => {
+  const response = await api.delete(`/articles/${id}`)
+  return response.data
+}
 //   export const add = async (id, articleInfo) => {
 //     const response = await api.post(`/articles/${id}/movies`, { movie: movieInfo })
 //     return response.data
