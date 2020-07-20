@@ -15,9 +15,12 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
+    puts '123456789098765543'
     @article = Article.new(article_params)
     @movie = Movie.find(params[:movie_id])
-    @article.movie = @movie
+    puts @movie.id, 'dfnekfgjbsfksdjfbskf'
+    @article.movie_id = @movie.id
+    
     @article.user = @current_user
     if @article.save
       render json: @article, status: :created
@@ -29,7 +32,7 @@ class ArticlesController < ApplicationController
   # PATCH/PUT /articles/1
   def update
     if @article.update(article_params)
-      render json: @article
+      render json: @article,  include: :movie
     else
       render json: @article.errors, status: :unprocessable_entity
     end
