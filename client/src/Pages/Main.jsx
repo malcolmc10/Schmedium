@@ -6,7 +6,7 @@ export default function Main(props) {
 
 
     return (
-        <div>
+        <div className="flex flex-wrap justify-evenly">
             {props.articles && props.articles.map(article => (
                 <div className="article max-w-lg shadow-lg rounded overflow-hidden m-4">
                     <Link to={`/article/${article.id}`} >

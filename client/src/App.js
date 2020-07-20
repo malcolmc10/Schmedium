@@ -101,7 +101,7 @@ export default class App extends Component {
 
           </div>
 
-          <div id="about">
+          <div id="about" className="bg-red-900 py-4">
             <About />
           </div>
 
