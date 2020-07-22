@@ -2,6 +2,9 @@
 # Schmedium
 This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you short and sweet reviews of your favorite movies. Save time with Movie time using Schmedium.
 
+## Deployed Site:
+http://schmediumpotter.surge.sh/
+
 
 # MVP
 
