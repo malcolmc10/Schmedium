@@ -13,7 +13,7 @@ http://schmediumpotter.surge.sh/
 3. Use Tailwind CSS to create a good looking application.
 4. Use proper Linting for usability for future contributors on this application.
 5. The application will showcase a carousel of articles on the home screen to showcase the movies.
-6. The application will allow the user to edit and delete their own articles via their MyArticles web page. 
+6. The application will allow the user to edit and delete their own articles via their Home Page web page. 
 
 
 
