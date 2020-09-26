@@ -17,7 +17,7 @@ export default function Header(props) {
         </li>
 
         <li className="hidden sm:block">
-          <a href="/" className="text-red-900">My Articles</a>
+          <a href="/" className="text-red-900 ">My Articles</a>
         </li>
 
         <li className="hidden sm:block">

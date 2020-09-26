@@ -40,7 +40,7 @@ export default class UpdateArticle extends Component {
             }} className="my-5 mx-auto max-w-xl shadow-md p-8">
                 <h3 className="text-3xl text-bold mb-5">Update Review</h3>
                 <label className="content-center text-xl m-8 ">
-                    Blog:
+                    Edit Your Text Below:
           <input
                         type='text'
                         value={this.state.article.article}
