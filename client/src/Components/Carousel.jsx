@@ -79,4 +79,4 @@ export default class SimpleSlider extends React.Component {
     }
   }
 
-//   used the react slider library to make the carousel possible.
+//   used the react slider library to make the carousel possible. As suggested by Scott and Christian who have used it in the past.
