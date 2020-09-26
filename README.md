@@ -1,6 +1,9 @@
 # Overview
 # Schmedium
-This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you indepth reviews in 500 characters of less. Save time with Movie time using Schmedium.
+This application in a blog that is small, simple, and sleek. Schmedium is a movie blog that can gives you short and sweet reviews of your favorite movies. Save time with Movie time using Schmedium.
+
+## Deployed Site:
+http://schmediumpotter.surge.sh/
 
 
 # MVP
@@ -9,9 +12,8 @@ This application in a blog that is small, simple, and sleek. Schmedium is a movi
 2. Use working controller actions to utilize full CRUD on articles the user creates.
 3. Use Tailwind CSS to create a good looking application.
 4. Use proper Linting for usability for future contributors on this application.
-5. The application will showcase a carousel of articles on the home screen to showcase articles.
-6. User will be able to few a list of randomly generated articles on the homepage.
-7. The application will allow the user to edit and delete their own articles via their MyArticles web page. 
+5. The application will showcase a carousel of articles on the home screen to showcase the movies.
+6. The application will allow the user to edit and delete their own articles via their Home Page web page. 
 
 
 
@@ -44,6 +46,7 @@ Rails - allows us to build backend models and tables.
 Axios - used for API.
 React Router - used for Routes.
 CORS - used for API calls.
+React-Slicker - allows for the use of carousel on the site. 
 ```
 
 
@@ -65,21 +68,23 @@ https://drive.google.com/file/d/1L8nO_c1plHJolDn2ffwNnGmnlsqlD3Co/view?usp=shari
 ```
 src
       
-|__ components/
-      |__ Header
-      |__ Footer
-      |__ App.jsx
+|__ Components/
+      |__ About.jsx
+      |__ Carousel.jsx
+      |__ Login.jsx
+      |__ Register.jsx
+      |__ UpdateArticle.jsx
+|__ Services/
+      |__ api-helper.js
+      |__ apiconfig.js
+      |__ auth.js
+|__ Shared/
+      |__ Footer.jsx
+      |__ Header.jsx
+      |__ App.js
+|__ Pages/
       |__ Main.jsx
-      |__ Register
-      |__ Create
-      |__ MyArticle
-      |__ Logo
-      |__ CSS
-|__ services/
-|__ assets/
-      |__ fonts
-      |__ graphics
-      |__ images
+      |__ Create.jsx
        
    ```  
 
@@ -95,14 +100,16 @@ src
 |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Logo.       | functional |   n   |   n   | _This component holds the Logo of the website application        |
 |   Footer     | functional |   y   |   n   | _This holds the copyright and portolio_                              |
-|    Review      | functional |   n   |   n   | _This page holds all the routes and links_.                      |
-|    ArticleC    | functional |   y   |   y   | _This is where you create articles_      |
+|    Login      | functional |   n   |   n   | _Login Component_.                      |
+|    UpdateArticle    | functional |   y   |   y   | _Holds update article functionality_      |
 |    App   | functional |   y   |   y   | _Holds the base of the code including routes_  |
-|    CSS pages | functional |   y   |   y   | _These components hold all of the styling for my application.    |
+|    Create | functional |   y   |   y   | _Holds Create component.    |
 |    Main    | functional |   n   |   n   | _This is the home page._               |
 |    Register    | functional |   n   |   n   | _Registration area_               |
 |    Login    | functional |   n   |   n   | _Logn area_               |
-|    MyArticle    | functional |   n   |   n   | _This is where the CRUD happens_               |
+|    Carousel    | functional |   n   |   n   | _Carousel component_               |
+|Register      | functional |   n   |   n   | _Register Component_.                      |
+|About     | functional |   n   |   n   | _About component_.                      |
 
 
 
