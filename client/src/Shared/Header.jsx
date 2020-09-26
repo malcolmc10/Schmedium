@@ -21,7 +21,7 @@ export default function Header(props) {
         </li>
 
         <li className="hidden sm:block">
-          <a href="/create">Blogiosa a Post</a>
+          <a href="/create">Write a Post</a>
         </li>
 
         <li>
