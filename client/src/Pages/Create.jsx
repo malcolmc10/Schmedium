@@ -52,9 +52,9 @@ export default class Create extends Component {
                     createArticle(this.state.movieId, this.state.article);
                     history.push('/articles')
                 }}>
-                    <h1 className="text-3xl text-bold mb-5">Blogiosa Whatever You'd Like</h1>
+                    <h1 className="text-3xl text-bold mb-5">Write Your Review Here!</h1>
                     <div >
-                        <h1 className="content-center text-xl m-8 ">It's Blogiosa not Blogiossaaa </h1><br></br>
+                        <h1 className="content-center text-xl m-8 ">Select a movie and write your thoughts below 🧙‍♂️</h1><br></br>
                         <select
                             onChange={this.handleSelectChange}
                         >
